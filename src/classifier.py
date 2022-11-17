@@ -11,7 +11,7 @@ import torchvision.transforms as T
 
 
 class ResNet50(nn.Module):
-    def __init__(self, n_classes=1000, pretrained=True, hidden_size=2048, model_file='/n/fs/nmdz-gender/resnet50_places365.pth.tar'):
+    def __init__(self, n_classes=1000, pretrained=True, hidden_size=2048, model_file):
         super().__init__()
         self.resnet = torchvision.models.resnet50(pretrained=pretrained)
         if not pretrained:  
